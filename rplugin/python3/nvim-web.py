@@ -10,5 +10,5 @@ class Main(object):
     def search(self, args):
         url = 'https://google.com/search?q='
         url += args[0].replace(' ', '+')
-        webbrowser.open_new(url, 2)
+        webbrowser.open_new(url)
 
