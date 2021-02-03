@@ -7,6 +7,6 @@ class Main(object):
         self.vim = vim
 
     @neovim.command('GoogleSearch', nargs=1)
-    def search(self):
-        self.vim.command(f'echo "hello"')
+    def search(self, *args):
+        self.vim.command(f'echo "hello {args}"')
 
