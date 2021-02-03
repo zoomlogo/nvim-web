@@ -11,8 +11,7 @@ class Main(object):
         url = 'https://google.com/search?q='
 
         # replace special chars
-        args = args[0].replace(' ', '%20')
-        args = args.replace('!', '%21')
+        args = args[0].replace('!', '%21')
         args = args.replace('"', '%22')
         args = args.replace('#', '%23')
         args = args.replace('$', '%24')
@@ -38,6 +37,7 @@ class Main(object):
         args = args.replace('^', '%5E')
         args = args.replace('~', '%7E')
         args = args.replace('_', '%5F')
+        args = args.replace(' ', '+')
         url += args
 
         # open the page
