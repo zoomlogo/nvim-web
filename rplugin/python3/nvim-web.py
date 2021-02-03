@@ -7,6 +7,8 @@ class Main(object):
         self.vim = vim
 
     @neovim.command('GoogleSearch', nargs=1)
-    def search(self, *args):
-        self.vim.command(f'echo "hello {args}"')
+    def search(self, args):
+        url = 'https://google.com/search?q='
+        url += args.replace(' ', '+')
+        webbrowser.open_new(url, 2)
 
