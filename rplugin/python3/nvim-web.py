@@ -9,6 +9,6 @@ class Main(object):
     @neovim.command('GoogleSearch', nargs=1)
     def search(self, args):
         url = 'https://google.com/search?q='
-        url += args.replace(' ', '+')
+        url += args[0].replace(' ', '+')
         webbrowser.open_new(url, 2)
 
