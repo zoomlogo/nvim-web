@@ -6,7 +6,7 @@ class Main(object):
     def __init__(self, vim):
         self.vim = vim
 
-    @neovim.command('GoogleSearch')
-    def doItPython(self, args):
-        self.vim.command(f'echo "hello from {args}"')
+    @neovim.command('GoogleSearch', nargs=1)
+    def search(self):
+        self.vim.command(f'echo "hello"')
 
